@@ -42,4 +42,4 @@ sudo docker build -t $NAME_TAG_IMAGE -f $NAME_FILE_DOCKER_ARM32V6 "./${NAME_DIR_
 
 echo '- Creating docker-compose runner script:'
 sudo curl -L --fail https://github.com/docker/compose/releases/download/1.24.1/run.sh -o ./run.sh
-cat ./run.sh | sed -E "s/^VERSION=\"[0-9\.]+\"/VERSION=\"arm32v6\"/" | sed -E "s/^IMAGE=\"docker\/compose/IMAGE=\"keinos\/docker-compose/" > ./run.sh
+cat ./run.sh | sed -E "s/^VERSION=\"[0-9\.]+\"/VERSION=\"arm32v6\"/" | sed -E "s/^IMAGE=\"docker\/compose/IMAGE=\"keinos\/docker-compose/" | sudo tee ./run.sh > /dev/null
