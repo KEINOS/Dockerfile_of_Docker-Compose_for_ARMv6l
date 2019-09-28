@@ -33,8 +33,8 @@ fi
 echo 'Submodule found.'
 
 echo '- Pulling submodule from origin:'
-cd $PATH_DIR_GIT_COMPOSE && \
-git pull origin
+git submodule init && \
+git submodule update
 
 echo '- Start building:'
 cd $PATH_DIR_CURRENT && \
