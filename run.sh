@@ -1,6 +1,9 @@
 #!/bin/sh
-#
-# Run docker-compose in a container
+# ============================================================================
+#   Alias script as "docker-compose" command.
+# ============================================================================
+# Rename this script as "docker-compose" and place it in env $PATH. Don't for-
+# get to change mode (`chmod +x docker-compose`).
 #
 # This script will attempt to mirror the host paths by using volumes for the
 # following paths:
@@ -11,7 +14,6 @@
 # You can add additional volumes (or any docker run options) using
 # the $COMPOSE_OPTIONS environment variable.
 #
-
 
 set -e
 
